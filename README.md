@@ -34,7 +34,7 @@
 
 - 命名规范： 使用大写字母和下划线来组合命名，下划线用以分割单词
 
-```html
+```js
 const MAX_COUNT = 10
 const URL = 'https://www.baidu.com/'
 ```
@@ -69,7 +69,7 @@ const URL = 'https://www.baidu.com/'
 
 - 驼峰式命名，统一使用动词或者动词+名词形式
 
-```html
+```js
   // bad
   go、nextPage、show、open、login
 
@@ -79,7 +79,7 @@ const URL = 'https://www.baidu.com/'
 
 - 请求数据方法，以 data 结尾
 
-```html
+```js
   // bad
   takeData、confirmData、getList、postForm
 
@@ -93,8 +93,8 @@ const URL = 'https://www.baidu.com/'
 
 **附：** 函数方法常用的动词：
 
-```html
-get 获取/set 设置
+```js
+`get` 获取/`set` 设置
 add 增加/remove 删除
 create 创建/destory 移除
 start 启动/stop 停止
@@ -197,7 +197,7 @@ props: {
 - 以下全局文件文件均以 `index.js` 导出，并在 `main.js` 中导入
 - 以下临时文件，在使用后，接口已经有了，发版后清除
 
-```
+```js
 src                               源码目录
 |-- api                              接口，统一管理
 |-- assets                           静态资源，统一管理
@@ -271,7 +271,7 @@ export default {
 
 如下所示：
 
-```
+```js
 - class
 - id,ref
 - name
@@ -301,7 +301,7 @@ export default {
 
 如下所示：
 
-```html
+```js
 - components
 - props
 - data
@@ -337,7 +337,7 @@ export default {
 
 注释单独一行，不要在代码后的同一行内加注释。例如：
 
-```html
+```js
   bad
 
   var name =”abc”; // 姓名    
@@ -377,7 +377,7 @@ export default {
 
 2. 静态字符串一律使用单引号或反引号，动态字符串使用反引号
 
-```
+```js
   // bad
   const a = 'foobar'
   const b = 'foo' + a + 'bar'
@@ -395,7 +395,7 @@ export default {
 
 - 数组成员对变量赋值时，优先使用解构赋值
 
-```
+```js
   // 数组解构赋值
   const arr = [1, 2, 3, 4]
   // bad
@@ -408,7 +408,7 @@ export default {
 
 - 函数的参数如果是对象的成员，优先使用解构赋值
 
-```
+```js
   // 对象解构赋值
   // bad
   function getFullName(user) {
@@ -429,7 +429,7 @@ export default {
 
 使用扩展运算符（`...`）拷贝数组
 
-```html
+```js
   const items = [1, 2, 3, 4, 5]
 
   // bad
@@ -442,7 +442,7 @@ export default {
 
 需要使用函数表达式的场合，尽量用箭头函数代替。因为这样更简洁，而且绑定了 `this`
 
-```html
+```js
   // bad
   const self = this;
   const boundMethod = function(...params) {
@@ -460,7 +460,7 @@ export default {
 
 - 如果模块只有一个输出值，就使用 `export default`，如果模块有多个输出值，就不使用 `export default``，export default` 与普通的 `export` 不要同时使用
 
-```html
+```js
   // bad
   import * as myObject from './importModule'
 
@@ -470,7 +470,7 @@ export default {
 
 - 如果模块默认输出一个函数，函数名的首字母应该小写
 
-```html
+```js
   function makeStyleGuide() {
   }
 
@@ -479,7 +479,7 @@ export default {
 
 - 如果模块默认输出一个对象，对象名的首字母应该大写
 
-```html
+```js
   const StyleGuide = {
     es6: {
     }
@@ -492,7 +492,7 @@ export default {
 
 1. 指令有缩写一律采用缩写形式
 
-```html
+```js
   // bad
   v-bind:class="{'show-left'：true}"
   v-on:click="getListData"
@@ -572,7 +572,7 @@ export default {
 
 ## `Props` 规范
 
-```html
+```js
 // bad 这样做只有开发原型系统时可以接受
 props: ['status']
 
@@ -601,7 +601,7 @@ props: {
 
 3. 除了三目运算，`if`,`else` 等禁止简写
 
-```html
+```js
   // bad
   if (true)
       alert(name);
@@ -617,30 +617,4 @@ props: {
       alert(name);
   }
   console.log(name);
-```
-
-```
-// not good
-computed: {
-  finalPrice: function () {
-    var basePrice = this.manufactureCost / (1 - this.profitMargin)
-    return (
-      basePrice -
-      basePrice * (this.discountPercent || 0)
-    )
-  }
-}
-
-// good
-computed: {
-  basePrice: function () {
-    return this.manufactureCost / (1 - this.profitMargin)
-  },
-  discount: function () {
-    return this.basePrice * (this.discountPercent || 0)
-  },
-  finalPrice: function () {
-    return this.basePrice - this.discount
-  }
-}
 ```
