@@ -24,9 +24,9 @@
 
 - 命名规范：
 
-    1. 命名必须是跟需求的内容相关的词，比如说我想申明一个变量，用来表示我的学校，那么我们可以这样定义const mySchool = "我的学校"
+    1. 命名必须是跟需求的内容相关的词，比如说我想申明一个变量，用来表示我的学校，那么我们可以这样定义`const mySchool = "我的学校"`
 
-    2. 命名是复数的时候需要加s，比如说我想申明一个数组，表示很多人的名字，那么我们可以这样定义const names = new Array()
+    2. 命名是复数的时候需要加s，比如说我想申明一个数组，表示很多人的名字，那么我们可以这样定义`const names = new Array()`
 
 ## 常量
 
@@ -34,7 +34,7 @@
 
 - 命名规范： 使用大写字母和下划线来组合命名，下划线用以分割单词
 
-```
+```html
 const MAX_COUNT = 10
 const URL = 'https://www.baidu.com/'
 ```
@@ -43,33 +43,33 @@ const URL = 'https://www.baidu.com/'
 
 #### 官方文档推荐及使用遵循规则：
 
-PascalCase（单词首字母大写命名）是最通用的声明约定
+`PascalCase`（单词首字母大写命名）是最通用的声明约定
 
-kebab-case（短横线分隔命名）是最通用的使用约定
+`kebab-case`（短横线分隔命名）是最通用的使用约定
 
 - 组件名应该始终是多个单词的，根组件 App 除外
 
 - 有意义的名词、简短、具有可读性
 
-- 命名遵循 PascalCase 约定
+- 命名遵循 `PascalCase` 约定
 
-    - 公用组件以 Abcd（公司名缩写简称）开头，如（AbcdDatePicker，AbcdTable）
+    - 公用组件以 `Abcd`（公司名缩写简称）开头，如（`AbcdDatePicker，AbcdTable`）
 
-    - 页面内部组件以组件模块名简写为开头，Item 为结尾，如（StaffBenchToChargeItem，StaffBenchAppNotArrItem）
+    - 页面内部组件以组件模块名简写为开头，Item 为结尾，如（`StaffBenchToChargeItem，StaffBenchAppNotArrItem`）
 
-- 使用遵循 kebab-case 约定
+- 使用遵循 `kebab-case` 约定
 
-    - 在页面中使用组件需要前后闭合，并以短线分隔，如（<abcd-date-picker></abcd-date-picker>，<abcd-table></abcd-table>）
+    - 在页面中使用组件需要前后闭合，并以短线分隔，如（`<abcd-date-picker></abcd-date-picker>，<abcd-table></abcd-table>`）
 
-- 导入及注册组件时，遵循 PascalCase 约定
+- 导入及注册组件时，遵循 `PascalCase` 约定
 
 - 同时还需要注意：必须符合自定义元素规范，切勿使用保留字
 
-## method 方法命名命名规范
+## `method` 方法命名命名规范
 
 - 驼峰式命名，统一使用动词或者动词+名词形式
 
-```
+```html
   // bad
   go、nextPage、show、open、login
 
@@ -79,7 +79,7 @@ kebab-case（短横线分隔命名）是最通用的使用约定
 
 - 请求数据方法，以 data 结尾
 
-```
+```html
   // bad
   takeData、confirmData、getList、postForm
 
@@ -87,13 +87,13 @@ kebab-case（短横线分隔命名）是最通用的使用约定
   getListData、postFormData
 ```
 
-- init、refresh 单词除外
+- `init`、`refresh` 单词除外
 
-- 尽量使用常用单词开头（set、get、go、can、has、is）
+- 尽量使用常用单词开头（`set`、`get`、`go`、`can`、`has`、`is`）
 
 **附：** 函数方法常用的动词：
 
-```
+```html
 get 获取/set 设置
 add 增加/remove 删除
 create 创建/destory 移除
@@ -150,21 +150,21 @@ obsolete 废弃/depreciate 废旧
 collect 收集/aggregate 聚集
 ```
 
-## views 下的文件命名
+## `views` 下的文件命名
 
-- 只有一个文件的情况下不会出现文件夹，而是直接放在 views 目录下面，如 index.vue
+- 只有一个文件的情况下不会出现文件夹，而是直接放在 `views` 目录下面，如 `index.vue`
 
 - 尽量是名词，且使用驼峰命名法
 
-- 开头的单词就是所属模块名字（workbenchIndex、workbenchList、workbenchEdit）
+- 开头的单词就是所属模块名字（`workbenchIndex、workbenchList、workbenchEdit`）
 
-- 名字至少两个单词（good: workbenchIndex）（bad:workbench）
+- 名字至少两个单词（good: `workbenchIndex`）（bad:`workbench`）
 
-## props 命名
+## `props` 命名
 
-在声明 prop 的时候，其命名应该始终使用 camelCase，而在模板中应该始终使用 kebab-case
+在声明 `prop` 的时候，其命名应该始终使用 `camelCase`，而在模板中应该始终使用 `kebab-case`
 
-```
+```html
 <!-- bad -->
 <script>
 props: {
@@ -186,15 +186,15 @@ props: {
 
 ## 例外情况
 
-1. 作用域不大临时变量可以简写，比如：str，num，bol，obj，fun，arr
+1. 作用域不大临时变量可以简写，比如：`str`，`num`，`bol`，`obj`，`fun`，`arr`
 
-2. 循环变量可以简写，比如：i，j，k 等
+2. 循环变量可以简写，比如：`i`，`j`，`k` 等
 
 # 结构化规范
 ## 目录文件夹及子文件规范
 
 - 以下统一管理处均对应相应模块
-- 以下全局文件文件均以 index.js 导出，并在 main.js 中导入
+- 以下全局文件文件均以 `index.js` 导出，并在 `main.js` 中导入
 - 以下临时文件，在使用后，接口已经有了，发版后清除
 
 ```
@@ -216,9 +216,9 @@ src                               源码目录
 |   |-- |-- components                     模块通用组件文件夹
 ```   
 
-## vue 文件基本结构
+## `vue` 文件基本结构
 
-```
+```html
 <template>
     <div>
       <!--必须在div中编写页面-->
@@ -233,7 +233,7 @@ export default {
         }
     },
     mounted() {
-    }，
+    },
     methods: {
     }
 }
@@ -247,7 +247,7 @@ export default {
 
 多个特性的元素应该分多行撰写，每个特性一行。(增强更易读)
 
-```
+```html
 <!-- bad -->
 <img src="https://vuejs.org/images/logo.png" alt="Vue Logo">
 <my-component foo="a" bar="b" baz="c"></my-component>
@@ -272,45 +272,45 @@ export default {
 如下所示：
 
 ```
- - class
-  - id,ref
-  - name
-  - data-*
-  - src, for, type, href,value,max-length,max,min,pattern
-  - title, alt，placeholder
-  - aria-*, role
-  - required,readonly,disabled
-  - is
-  - v-for
-  - key
-  - v-if
-  - v-else-if
-  - v-else
-  - v-show
-  - v-cloak
-  - v-pre
-  - v-once
-  - v-model
-  - v-bind,:
-  - v-on,@
-  - v-html
-  - v-text
+- class
+- id,ref
+- name
+- data-*
+- src, for, type, href, value, max-length, max, min, pattern
+- title, alt, placeholder
+- aria-*, role
+- required, readonly, disabled
+- is
+- v-for
+- key
+- v-if
+- v-else-if
+- v-else
+- v-show
+- v-cloak
+- v-pre
+- v-once
+- v-model
+- v-bind, :
+- v-on, @
+- v-html
+- v-text
 ```
 
 ## 组件选项顺序
 
 如下所示：
 
-```
-  - components
-  - props
-  - data
-  - computed
-  - created
-  - mounted
-  - metods
-  - filter
-  - watch
+```html
+- components
+- props
+- data
+- computed
+- created
+- mounted
+- metods
+- filter
+- watch
 ```
 
 # 注释规范
@@ -327,9 +327,9 @@ export default {
 
 4. 特殊情况的代码处理说明,对于代码中特殊用途的变量、存在临界值、函数中使用的 hack、使用了某种算法或思路等需要进行注释描述
 
-5. 多重 if 判断语句
+5. 多重 `if` 判断语句
 
-6. 注释块必须以/**（至少两个星号）开头**/
+6. 注释块必须以/** **（至少两个星号）开头**
 
 7. 单行注释使用 //
 
@@ -337,7 +337,7 @@ export default {
 
 注释单独一行，不要在代码后的同一行内加注释。例如：
 
-```
+```html
   bad
 
   var name =”abc”; // 姓名    
@@ -350,30 +350,30 @@ export default {
 
 ## 多行注释
 
-```
+```html
 组件使用说明，和调用说明
-      /**
-      * 组件名称
-      * @module 组件存放位置
-      * @desc 组件描述
-      * @author 组件作者
-      * @date 2017年12月05日17:22:43
-      * @param {Object} [title]    - 参数说明
-      * @param {String} [columns] - 参数说明
-      * @example 调用示例
-      *  <hbTable :title="title" :columns="columns" :tableData="tableData"></hbTable>
-      **/
+/**
+* 组件名称
+* @module 组件存放位置
+* @desc 组件描述
+* @author 组件作者
+* @date 2017年12月05日17:22:43
+* @param {Object} [title]    - 参数说明
+* @param {String} [columns] - 参数说明
+* @example 调用示例
+*  <hbTable :title="title" :columns="columns" :tableData="tableData"></hbTable>
+**/
 ```
 
 # 编码规范
 
-优秀的项目源码，即使是多人开发，看代码也如出一人之手。统一的编码规范，可使代码更易于阅读，易于理解，易于维护。尽量按照 ESLint 格式要求编写代码
+优秀的项目源码，即使是多人开发，看代码也如出一人之手。统一的编码规范，可使代码更易于阅读，易于理解，易于维护。尽量按照 **ESLint** 格式要求编写代码
 
 ## 源码风格
 
 #### 使用 ES6 风格编码
 
-1. 定义变量使用 let ,定义常量使用 const
+1. 定义变量使用 `let` ,定义常量使用 `const`
 
 2. 静态字符串一律使用单引号或反引号，动态字符串使用反引号
 
@@ -427,9 +427,9 @@ export default {
 
 4. 拷贝数组
 
-使用扩展运算符（...）拷贝数组
+使用扩展运算符（`...`）拷贝数组
 
-```
+```html
   const items = [1, 2, 3, 4, 5]
 
   // bad
@@ -440,9 +440,9 @@ export default {
 ```
 5. 箭头函数
 
-需要使用函数表达式的场合，尽量用箭头函数代替。因为这样更简洁，而且绑定了 this
+需要使用函数表达式的场合，尽量用箭头函数代替。因为这样更简洁，而且绑定了 `this`
 
-```
+```html
   // bad
   const self = this;
   const boundMethod = function(...params) {
@@ -458,9 +458,9 @@ export default {
 
 6. 模块
 
-- 如果模块只有一个输出值，就使用 export default，如果模块有多个输出值，就不使用 export default，export default 与普通的 export 不要同时使用
+- 如果模块只有一个输出值，就使用 `export default`，如果模块有多个输出值，就不使用 `export default``，export default` 与普通的 `export` 不要同时使用
 
-```
+```html
   // bad
   import * as myObject from './importModule'
 
@@ -470,7 +470,7 @@ export default {
 
 - 如果模块默认输出一个函数，函数名的首字母应该小写
 
-```
+```html
   function makeStyleGuide() {
   }
 
@@ -479,7 +479,7 @@ export default {
 
 - 如果模块默认输出一个对象，对象名的首字母应该大写
 
-```
+```html
   const StyleGuide = {
     es6: {
     }
@@ -492,7 +492,7 @@ export default {
 
 1. 指令有缩写一律采用缩写形式
 
-```
+```html
   // bad
   v-bind:class="{'show-left'：true}"
   v-on:click="getListData"
@@ -502,9 +502,9 @@ export default {
   @click="getListData"
 ```
 
-2. v-for 循环必须加上 key 属性，在整个 for 循环中 key 需要唯一
+2. `v-for` 循环必须加上 `key` 属性，在整个 `for` 循环中 `key` 需要唯一
 
-```
+```html
   <!-- good -->
   <ul>
     <li v-for="todo in todos" :key="todo.id">
@@ -520,13 +520,13 @@ export default {
   </ul>
 ```
 
-3. 避免 v-if 和 v-for 同时用在一个元素上（性能问题）
+3. 避免 `v-if` 和 `v-for` 同时用在一个元素上（性能问题）
 
    以下为两种解决方案：
 
 - 将数据替换为一个计算属性，让其返回过滤后的列表
 
-```
+```html
   <!-- bad -->
   <ul>
     <li v-for="user in users" v-if="user.isActive" :key="user.id">
@@ -552,9 +552,9 @@ export default {
   </script>
 ```
 
-- 将 v-if 移动至容器元素上 (比如 ul, ol)
+- 将 `v-if` 移动至容器元素上 (比如 `ul`, `ol`)
 
-```
+```html
   <!-- bad -->
   <ul>
     <li v-for="user in users" v-if="shouldShowUsers" :key="user.id">
@@ -570,9 +570,9 @@ export default {
   </ul>
 ```
 
-## Props 规范
+## `Props` 规范
 
-```
+```html
 // bad 这样做只有开发原型系统时可以接受
 props: ['status']
 
@@ -595,13 +595,13 @@ props: {
 
 ## 其他
 
-1. 避免 this.$parent
+1. 避免 `this.$parent`
 
-2. 调试信息 console.log() debugger 使用完及时删除
+2. 调试信息 `console.log()` `debugger` 使用完及时删除
 
-3. 除了三目运算，if,else 等禁止简写
+3. 除了三目运算，`if`,`else` 等禁止简写
 
-```
+```html
   // bad
   if (true)
       alert(name);
@@ -618,161 +618,3 @@ props: {
   }
   console.log(name);
 ```
-
-# CSS 规范
-
-## 通用规范
-
-1. 统一使用"-"连字符
-
-2. 省略值为 0 时的单位
-
-```
- // bad
-  padding-bottom: 0px;
-  margin: 0em;
-
- // good
-  padding-bottom: 0;
-  margin: 0;
-```
-
-3. 如果 CSS 可以做到，就不要使用 JS
-
-4. 建议并适当缩写值，提高可读性，特殊情况除外
-
-   “建议并适当”是因为缩写总是会包含一系列的值，而有时候我们并不希望设置某一值，反而造成了麻烦，那么这时候你可以不缩写，而是分开写。
-
-   当然，在一切可以缩写的情况下，请务必缩写，它最大的好处就是节省了字节，便于维护，并使阅读更加一目了然。
-
-```
-  // bad
-  .box{
-    border-top-style: none;
-    font-family: palatino, georgia, serif;
-    font-size: 100%;
-    line-height: 1.6;
-    padding-bottom: 2em;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 0;
-  }
-
-  // good
-  .box{
-    border-top: 0;
-    font: 100%/1.6 palatino, georgia, serif;
-    padding: 0 1em 2em;
-  }
-```
-
-5. 声明应该按照下表的顺序
-
-从上到下，从左到右：
-
-| 显示属性  | 自身属性 | 文本属性和其他修饰 |
-| ------------- | ------------- | ------------- |
-| display | width | font |
-| visibility | height | text-align |
-| position | margin | text-decoration |
-| float | padding | vertical-align |
-| clear | border | white-space |
-| list-style | overflow | color |
-| top | min-width | background |
-
-```
-  // bad
-  .box {
-    font-family: 'Arial', sans-serif;
-    border: 3px solid #ddd;
-    left: 30%;
-    position: absolute;
-    text-transform: uppercase;
-    background-color: #eee;
-    right: 30%;
-    isplay: block;
-    font-size: 1.5rem;
-    overflow: hidden;
-    padding: 1em;
-    margin: 1em;
-  }
-
-  // good
-  .box {
-    display: block;
-    position: absolute;
-    left: 30%;
-    right: 30%;
-    overflow: hidden;
-    margin: 1em;
-    padding: 1em;
-    background-color: #eee;
-    border: 3px solid #ddd;
-    font-family: 'Arial', sans-serif;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-  }
-```
-6. 元素选择器应该避免在 scoped 中出现
-
-    官方文档说明：在 scoped 样式中，类选择器比元素选择器更好，因为大量使用元素选择器是很慢的
-
-7. 分类的命名方法
-
-    使用单个字母加上"-"为前缀
-
-    布局（grid）（.g-）
-
-    模块（module）（.m-）
-
-    元件（unit）（.u-）
-
-    功能（function）（.f-）
-
-    皮肤（skin）（.s-）
-
-    状态（.z-）
-
-8. 统一语义理解和命名
-
-##### 布局（.g-）
-
-| 语义 | 命名 | 简写 |
-| 文档 | doc | doc |
-| 头部 | head | hd |
-| 主体 | body | bd |
-| 尾部 | foot | ft |
-| 主栏 | main | mn |
-| 主栏子容器 | mainc | mnc |
-| 侧栏 | side | sd |
-| 侧栏子容器 | sidec | sdc |
-| 盒容器 | wrap/box | wrap/box |
-
-模块（.m-）、元件（.u-）
-
-| 语义 | 命名 | 简写 |
-| 导航 | nav | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-| 语义 | 命名 | 简写 |
-
-
-
