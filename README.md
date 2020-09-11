@@ -1,22 +1,53 @@
 
 # VUE开发规范
 
-## Vue 开发规范目录及说明
-本文档为前端Vue开发规范
+## 目录
 
-- 规范目的
-- 命名规范
-- 结构化规范
-- 注释规范
-- 编码规范
-- CSS 规范
+* [普通变量命名规范](#普通变量命名规范)
+* [常量](#常量)
+* [组件命名规范](#组件命名规范)
+* [官方文档推荐及使用遵循规则](#官方文档推荐及使用遵循规则)
+* [`method` 方法命名命名规范](#method-方法命名命名规范)
+* [`views` 下的文件命名](#views-下的文件命名)
+* [`props` 命名](#props-命名)
+* [例外情况](#例外情况)
+* [结构化规范](#结构化规范)
+* [目录文件夹及子文件规范](#目录文件夹及子文件规范)
+* [`vue` 文件基本结构](#vue-文件基本结构)
+* [多个特性的元素规范](#多个特性的元素规范)
+* [元素特性的顺序](#元素特性的顺序)
+* [组件选项顺序](#组件选项顺序)
+* [注释规范](#注释规范)
+* [务必添加注释列表](#务必添加注释列表)
+* [单行注释](#单行注释)
+* [多行注释](#多行注释)
+* [编码规范](#编码规范)
+* [源码风格](#源码风格)
+* [使用 ES6 风格编码](#使用-ES6-风格编码)
+* [`Props` 规范](#Props-规范)
+* [其他](#其他)
+* [VsCode保存时自动修复Eslint错误](#VsCode保存时自动修复Eslint错误)
 
-## Vue 开发规范目录及说明
-为提高团队协作效率
+## 类型规范
 
-便于后台人员添加功能及前端后期优化维护
+>请遵守ES6语法规范
+>
+>对于常量或不修改的变量声明使用`const`
+>
+>对于只在当前作用域下有效的变量，应使用`let`，不再使用`var`
+>
+>优先使用`const`
+>
+>将所有 `const` 变量放在一起，然后将所有 `let` 变量放在一起
 
-输出高质量的文档
+```js
+  const foo = 2222
+
+  let foo1 = 222222
+  let bar = foo
+  bar = 93333
+  foo1 = 33333
+```
 
 ## 普通变量命名规范
 
@@ -24,9 +55,15 @@
 
 - 命名规范：
 
-    1. 命名必须是跟需求的内容相关的词，比如说我想申明一个变量，用来表示我的学校，那么我们可以这样定义`const mySchool = "我的学校"`
+    1. 命名必须是跟需求的内容相关的词，比如说我想申明一个变量，用来表示我的学校，那么我们可以这样定义
 
-    2. 命名是复数的时候需要加s，比如说我想申明一个数组，表示很多人的名字，那么我们可以这样定义`const names = new Array()`
+    `const mySchool = "我的学校"`
+
+    2. 命名是复数的时候需要加s，比如说我想申明一个数组，表示很多人的名字，那么我们可以这样定义
+
+    `const names = new Array()`
+
+[↑ 回到目录](#目录)
 
 ## 常量
 
@@ -39,9 +76,11 @@ const MAX_COUNT = 10
 const URL = 'https://www.baidu.com/'
 ```
 
+[↑ 回到目录](#目录)
+
 ## 组件命名规范
 
-#### 官方文档推荐及使用遵循规则：
+#### 官方文档推荐及使用遵循规则
 
 `PascalCase`（单词首字母大写命名）是最通用的声明约定
 
@@ -53,17 +92,25 @@ const URL = 'https://www.baidu.com/'
 
 - 命名遵循 `PascalCase` 约定
 
-    - 公用组件以 `Abcd`（公司名缩写简称）开头，如（`AbcdDatePicker，AbcdTable`）
+    - 公用组件以 `Abcd`（公司名缩写简称）开头，如
 
-    - 页面内部组件以组件模块名简写为开头，Item 为结尾，如（`StaffBenchToChargeItem，StaffBenchAppNotArrItem`）
+    `AbcdDatePicker`，`AbcdTable`
+
+    - 页面内部组件以组件模块名简写为开头，Item 为结尾，如
+
+    `StaffBenchToChargeItem`，`StaffBenchAppNotArrItem`
 
 - 使用遵循 `kebab-case` 约定
 
-    - 在页面中使用组件需要前后闭合，并以短线分隔，如（`<abcd-date-picker></abcd-date-picker>，<abcd-table></abcd-table>`）
+    - 在页面中使用组件需要前后闭合，并以短线分隔，如
+    
+    `<abcd-date-picker></abcd-date-picker>`，`<abcd-table></abcd-table>`
 
 - 导入及注册组件时，遵循 `PascalCase` 约定
 
 - 同时还需要注意：必须符合自定义元素规范，切勿使用保留字
+
+[↑ 回到目录](#目录)
 
 ## `method` 方法命名命名规范
 
@@ -202,6 +249,8 @@ const URL = 'https://www.baidu.com/'
 >
 > `collect` 收集 `aggregate` 聚集
 
+[↑ 回到目录](#目录)
+
 ## `views` 下的文件命名
 
 - 只有一个文件的情况下不会出现文件夹，而是直接放在 `views` 目录下面，如 `index.vue`
@@ -211,6 +260,8 @@ const URL = 'https://www.baidu.com/'
 - 开头的单词就是所属模块名字（`workbenchIndex、workbenchList、workbenchEdit`）
 
 - 名字至少两个单词（good: `workbenchIndex`）（bad:`workbench`）
+
+[↑ 回到目录](#目录)
 
 ## `props` 命名
 
@@ -236,11 +287,15 @@ props: {
 <welcome-message greeting-text="hi"></welcome-message>
 ```
 
+[↑ 回到目录](#目录)
+
 ## 例外情况
 
 1. 作用域不大临时变量可以简写，比如：`str`，`num`，`bol`，`obj`，`fun`，`arr`
 
 2. 循环变量可以简写，比如：`i`，`j`，`k` 等
+
+[↑ 回到目录](#目录)
 
 # 结构化规范
 ## 目录文件夹及子文件规范
@@ -263,10 +318,12 @@ src                               源码目录
 |-- store                            vuex, 统一管理
 |-- views                            视图目录
 |   |-- staffWorkbench                  视图模块名
-|   |-- |-- (staffWorkbench.vue)             模块入口页面
+|   |-- |-- staffWorkbench.vue             模块入口页面
 |   |-- |-- indexComponents                模块页面级组件文件夹
 |   |-- |-- components                     模块通用组件文件夹
 ```   
+
+[↑ 回到目录](#目录)
 
 ## `vue` 文件基本结构
 
@@ -295,6 +352,8 @@ export default {
 </style>
 ```
 
+[↑ 回到目录](#目录)
+
 ## 多个特性的元素规范
 
 多个特性的元素应该分多行撰写，每个特性一行。(增强更易读)
@@ -316,6 +375,8 @@ export default {
 >
 </my-component>
 ```
+
+[↑ 回到目录](#目录)
 
 ## 元素特性的顺序
 
@@ -349,6 +410,8 @@ export default {
 - v-text
 ```
 
+[↑ 回到目录](#目录)
+
 ## 组件选项顺序
 
 如下所示：
@@ -365,9 +428,13 @@ export default {
 - watch
 ```
 
+[↑ 回到目录](#目录)
+
 # 注释规范
 
 代码注释在一个项目的后期维护中显的尤为重要，所以我们要为每一个被复用的组件编写组件使用说明，为组件中每一个方法编写方法说明
+
+[↑ 回到目录](#目录)
 
 ## 务必添加注释列表
 
@@ -385,6 +452,8 @@ export default {
 
 7. 单行注释使用 //
 
+[↑ 回到目录](#目录)
+
 ## 单行注释
 
 注释单独一行，不要在代码后的同一行内加注释。例如：
@@ -399,6 +468,8 @@ export default {
   // 姓名
   var name = “abc”;      
 ```
+
+[↑ 回到目录](#目录)
 
 ## 多行注释
 
@@ -417,9 +488,13 @@ export default {
 **/
 ```
 
+[↑ 回到目录](#目录)
+
 # 编码规范
 
 优秀的项目源码，即使是多人开发，看代码也如出一人之手。统一的编码规范，可使代码更易于阅读，易于理解，易于维护。尽量按照 **ESLint** 格式要求编写代码
+
+[↑ 回到目录](#目录)
 
 ## 源码风格
 
@@ -540,6 +615,8 @@ export default {
   export default StyleGuide;
 ```
 
+[↑ 回到目录](#目录)
+
 ## 指令规范
 
 1. 指令有缩写一律采用缩写形式
@@ -622,6 +699,8 @@ export default {
   </ul>
 ```
 
+[↑ 回到目录](#目录)
+
 ## `Props` 规范
 
 ```js
@@ -644,6 +723,8 @@ props: {
   }
 }
 ```
+
+[↑ 回到目录](#目录)
 
 ## 其他
 
@@ -670,3 +751,49 @@ props: {
   }
   console.log(name);
 ```
+
+[↑ 回到目录](#目录)
+
+## VsCode保存时自动修复Eslint错误
+
+> *同一个项目，保持代码风格的一致，是非常重要的一个规范。但事实上项目小组成员的代码校验规则、格式化工具通常都不一致，为了避免项目到后期出现无法维护的问题，项目成员使用同一套校验规则，同一个格式化方式是相当好的步骤之一。*
+
+#### 配置：
+1. 安装VsCode的EsLint、vetur和Prettier - Code formatter插件
+2. 为项目安装EsLint包
+4. settings.json 配置
+
+```json
+  // 代码规范-eslint
+  "editor.lineNumbers": "on", // 控制行号的显示。 on: 将行号显示为绝对行数
+  "editor.quickSuggestions": { // 控制是否在键入时自动显示建议
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "prettier.useTabs": true, // 使用制表符缩进
+  "editor.tabSize": 2, // tab空几格
+  // autoFixedOnSave 设置已废弃，采用如下新的设置
+	"editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.format.enable": true, // 启用ESLint作为格式化程序
+    // autoFix默认开启，只需输入字符串数组即可
+  "eslint.validate": ["javascript", "html", "vue", "react"],
+  "prettier.semi": true, // 去掉代码结尾的分号
+  "prettier.singleQuote": true, // 使用单引号替代双引号
+  "prettier.trailingComma": "none", // 去除对象最末尾元素跟随的逗号
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true, // 让函数(名)和后面的括号之间加个空格
+  "vetur.format.defaultFormatter": {  // 格式化方式 (这个按用户自身习惯选择)
+    "html": "prettier",
+    "css": "prettier",
+    "postcss": "prettier",
+    "scss": "prettier",
+    "less": "prettier",
+    "js": "prettier",
+    "ts": "prettier",
+    "stylus": "stylus-supremacy"
+  }
+```
+
+[↑ 回到目录](#目录)
