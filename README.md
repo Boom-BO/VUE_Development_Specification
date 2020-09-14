@@ -765,7 +765,8 @@ props: {
 ```json
   // 代码规范-eslint
   "editor.lineNumbers": "on", // 控制行号的显示。 on: 将行号显示为绝对行数
-  "editor.quickSuggestions": { // 控制是否在键入时自动显示建议
+  // 控制是否在键入时自动显示建议
+  "editor.quickSuggestions": { 
     "other": true,
     "comments": true,
     "strings": true
