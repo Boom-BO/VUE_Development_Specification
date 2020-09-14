@@ -33,11 +33,11 @@
 
 >对于常量或不修改的变量声明使用`const`
 >
->对于只在当前作用域下有效的变量，应使用`let`，不再使用`var`
+>对于只在当前作用域下有效的变量, 应使用`let`, 不再使用`var`
 >
 >优先使用`const`
 >
->将所有 `const` 变量放在一起，然后将所有 `let` 变量放在一起
+>将所有 `const` 变量放在一起, 然后将所有 `let` 变量放在一起
 
 ```js
   const foo = 2222
@@ -54,11 +54,11 @@
 
 - 命名规范：
 
-    1. 命名必须是跟需求的内容相关的词，比如说我想申明一个变量，用来表示我的学校，那么我们可以这样定义
+    1. 命名必须是跟需求的内容相关的词, 比如说我想申明一个变量, 用来表示我的学校, 那么我们可以这样定义
 
     `const mySchool = "我的学校"`
 
-    2. 命名是复数的时候需要加s，比如说我想申明一个数组，表示很多人的名字，那么我们可以这样定义
+    2. 命名是复数的时候需要加s, 比如说我想申明一个数组, 表示很多人的名字, 那么我们可以这样定义
 
     `const names = new Array()`
 
@@ -68,7 +68,7 @@
 
 - 命名方法： 全部大写
 
-- 命名规范： 使用大写字母和下划线来组合命名，下划线用以分割单词
+- 命名规范： 使用大写字母和下划线来组合命名, 下划线用以分割单词
 
 ```js
 const MAX_COUNT = 10
@@ -85,57 +85,57 @@ const URL = 'https://www.baidu.com/'
 
 `kebab-case`（短横线分隔命名）是最通用的使用约定
 
-- 组件名应该始终是多个单词的，根组件 App 除外
+- 组件名应该始终是多个单词的, 根组件 App 除外
 
-- 有意义的名词、简短、具有可读性
+- 有意义的名词, 简短, 具有可读性
 
 - 命名遵循 `PascalCase` 约定
 
-    - 公用组件以 `Abcd`（公司名缩写简称）开头，如
+    - 公用组件以 `Abcd`（公司名缩写简称）开头, 如
 
-    `AbcdDatePicker`，`AbcdTable`
+    `AbcdDatePicker`, `AbcdTable`
 
-    - 页面内部组件以组件模块名简写为开头，Item 为结尾，如
+    - 页面内部组件以组件模块名简写为开头, Item 为结尾, 如
 
-    `StaffBenchToChargeItem`，`StaffBenchAppNotArrItem`
+    `StaffBenchToChargeItem`, `StaffBenchAppNotArrItem`
 
 - 使用遵循 `kebab-case` 约定
 
-    - 在页面中使用组件需要前后闭合，并以短线分隔，如
+    - 在页面中使用组件需要前后闭合, 并以短线分隔, 如
     
-    `<abcd-date-picker></abcd-date-picker>`，`<abcd-table></abcd-table>`
+    `<abcd-date-picker></abcd-date-picker>`, `<abcd-table></abcd-table>`
 
-- 导入及注册组件时，遵循 `PascalCase` 约定
+- 导入及注册组件时, 遵循 `PascalCase` 约定
 
-- 同时还需要注意：必须符合自定义元素规范，切勿使用保留字
+- 同时还需要注意：必须符合自定义元素规范, 切勿使用保留字
 
 [↑ 回到目录](#目录)
 
 ## `method` 方法命名命名规范
 
-- 驼峰式命名，统一使用动词或者动词+名词形式
+- 驼峰式命名, 统一使用动词或者动词+名词形式
 
 ```js
   // bad
-  go、nextPage、show、open、login
+  go, nextPage, show, open, login
 
   // good
-  jumpPage、openCarInfoDialog
+  jumpPage, openCarInfoDialog
 ```
 
-- 请求数据方法，以 data 结尾
+- 请求数据方法, 以 data 结尾
 
 ```js
   // bad
-  takeData、confirmData、getList、postForm
+  takeData, confirmData, getList, postForm
 
   // good
-  getListData、postFormData
+  getListData, postFormData
 ```
 
-- `init`、`refresh` 单词除外
+- `init`, `refresh` 单词除外
 
-- 尽量使用常用单词开头（`set`、`get`、`go`、`can`、`has`、`is`）
+- 尽量使用常用单词开头（`set`, `get`, `go`, `can`, `has`, `is`）
 
 **附：** 函数方法常用的动词：
 
@@ -252,11 +252,11 @@ const URL = 'https://www.baidu.com/'
 
 ## `views` 下的文件命名
 
-- 只有一个文件的情况下不会出现文件夹，而是直接放在 `views` 目录下面，如 `index.vue`
+- 只有一个文件的情况下不会出现文件夹, 而是直接放在 `views` 目录下面, 如 `index.vue`
 
-- 尽量是名词，且使用驼峰命名法
+- 尽量是名词, 且使用驼峰命名法
 
-- 开头的单词就是所属模块名字（`workbenchIndex、workbenchList、workbenchEdit`）
+- 开头的单词就是所属模块名字（`workbenchIndex, workbenchList, workbenchEdit`）
 
 - 名字至少两个单词（good: `workbenchIndex`）（bad:`workbench`）
 
@@ -264,7 +264,7 @@ const URL = 'https://www.baidu.com/'
 
 ## `props` 命名
 
-在声明 `prop` 的时候，其命名应该始终使用 `camelCase`，而在模板中应该始终使用 `kebab-case`
+在声明 `prop` 的时候, 其命名应该始终使用 `camelCase`, 而在模板中应该始终使用 `kebab-case`
 
 ```html
 <!-- bad -->
@@ -290,9 +290,9 @@ props: {
 
 ## 例外情况
 
-1. 作用域不大临时变量可以简写，比如：`str`，`num`，`bol`，`obj`，`fun`，`arr`
+1. 作用域不大临时变量可以简写, 比如：`str`, `num`, `bol`, `obj`, `fun`, `arr`
 
-2. 循环变量可以简写，比如：`i`，`j`，`k` 等
+2. 循环变量可以简写, 比如：`i`, `j`, `k` 等
 
 [↑ 回到目录](#目录)
 
@@ -300,20 +300,20 @@ props: {
 ## 目录文件夹及子文件规范
 
 - 以下统一管理处均对应相应模块
-- 以下全局文件文件均以 `index.js` 导出，并在 `main.js` 中导入
-- 以下临时文件，在使用后，接口已经有了，发版后清除
+- 以下全局文件文件均以 `index.js` 导出, 并在 `main.js` 中导入
+- 以下临时文件, 在使用后, 接口已经有了, 发版后清除
 
 ```js
 src                               源码目录
-|-- api                              接口，统一管理
-|-- assets                           静态资源，统一管理
-|-- components                       公用组件，全局文件
-|-- filters                          过滤器，全局工具
-|-- icons                            图标，全局资源
-|-- datas                            模拟数据，临时存放
+|-- api                              接口, 统一管理
+|-- assets                           静态资源, 统一管理
+|-- components                       公用组件, 全局文件
+|-- filters                          过滤器, 全局工具
+|-- icons                            图标, 全局资源
+|-- datas                            模拟数据, 临时存放
 |-- lib                              外部引用的插件存放及修改文件
-|-- mock                             模拟接口，临时存放
-|-- router                           路由，统一管理
+|-- mock                             模拟接口, 临时存放
+|-- router                           路由, 统一管理
 |-- store                            vuex, 统一管理
 |-- views                            视图目录
 |   |-- staffWorkbench                  视图模块名
@@ -346,7 +346,7 @@ export default {
     }
 }
 </script>
-<!--声明语言，并且添加scoped-->
+<!--声明语言, 并且添加scoped-->
 <style lang="scss" scoped>
 </style>
 ```
@@ -355,7 +355,7 @@ export default {
 
 ## 多个特性的元素规范
 
-多个特性的元素应该分多行撰写，每个特性一行。(增强更易读)
+多个特性的元素应该分多行撰写, 每个特性一行。(增强更易读)
 
 ```html
 <!-- bad -->
@@ -379,7 +379,7 @@ export default {
 
 ## 元素特性的顺序
 
-原生属性放前面，指令放后面
+原生属性放前面, 指令放后面
 
 如下所示：
 
@@ -431,7 +431,7 @@ export default {
 
 # 注释规范
 
-代码注释在一个项目的后期维护中显的尤为重要，所以我们要为每一个被复用的组件编写组件使用说明，为组件中每一个方法编写方法说明
+代码注释在一个项目的后期维护中显的尤为重要, 所以我们要为每一个被复用的组件编写组件使用说明, 为组件中每一个方法编写方法说明
 
 [↑ 回到目录](#目录)
 
@@ -443,7 +443,7 @@ export default {
 
 3. 复杂的业务逻辑处理说明
 
-4. 特殊情况的代码处理说明,对于代码中特殊用途的变量、存在临界值、函数中使用的 hack、使用了某种算法或思路等需要进行注释描述
+4. 特殊情况的代码处理说明,对于代码中特殊用途的变量, 存在临界值, 函数中使用的 hack, 使用了某种算法或思路等需要进行注释描述
 
 5. 多重 `if` 判断语句
 
@@ -455,7 +455,7 @@ export default {
 
 ## 单行注释
 
-注释单独一行，不要在代码后的同一行内加注释。例如：
+注释单独一行, 不要在代码后的同一行内加注释。例如：
 
 ```js
   bad
@@ -473,7 +473,7 @@ export default {
 ## 多行注释
 
 ```html
-组件使用说明，和调用说明
+组件使用说明, 和调用说明
 /**
 * 组件名称
 * @module 组件存放位置
@@ -491,7 +491,7 @@ export default {
 
 # 编码规范
 
-优秀的项目源码，即使是多人开发，看代码也如出一人之手。统一的编码规范，可使代码更易于阅读，易于理解，易于维护。尽量按照 **ESLint** 格式要求编写代码
+优秀的项目源码, 即使是多人开发, 看代码也如出一人之手。统一的编码规范, 可使代码更易于阅读, 易于理解, 易于维护。尽量按照 **ESLint** 格式要求编写代码
 
 [↑ 回到目录](#目录)
 
@@ -501,7 +501,7 @@ export default {
 
 1. 定义变量使用 `let` ,定义常量使用 `const`
 
-2. 静态字符串一律使用单引号或反引号，动态字符串使用反引号
+2. 静态字符串一律使用单引号或反引号, 动态字符串使用反引号
 
 ```js
   // bad
@@ -519,7 +519,7 @@ export default {
 
 3. 解构赋值
 
-- 数组成员对变量赋值时，优先使用解构赋值
+- 数组成员对变量赋值时, 优先使用解构赋值
 
 ```js
   // 数组解构赋值
@@ -532,7 +532,7 @@ export default {
   const [first, second] = arr
 ```
 
-- 函数的参数如果是对象的成员，优先使用解构赋值
+- 函数的参数如果是对象的成员, 优先使用解构赋值
 
 ```js
   // 对象解构赋值
@@ -566,7 +566,7 @@ export default {
 ```
 5. 箭头函数
 
-需要使用函数表达式的场合，尽量用箭头函数代替。因为这样更简洁，而且绑定了 `this`
+需要使用函数表达式的场合, 尽量用箭头函数代替。因为这样更简洁, 而且绑定了 `this`
 
 ```js
   // bad
@@ -584,7 +584,7 @@ export default {
 
 6. 模块
 
-- 如果模块只有一个输出值，就使用 `export default`，如果模块有多个输出值，就不使用 `export default``，export default` 与普通的 `export` 不要同时使用
+- 如果模块只有一个输出值, 就使用 `export default`, 如果模块有多个输出值, 就不使用 `export default``, export default` 与普通的 `export` 不要同时使用
 
 ```js
   // bad
@@ -594,7 +594,7 @@ export default {
   import myObject from './importModule'
 ```
 
-- 如果模块默认输出一个函数，函数名的首字母应该小写
+- 如果模块默认输出一个函数, 函数名的首字母应该小写
 
 ```js
   function makeStyleGuide() {
@@ -603,7 +603,7 @@ export default {
   export default makeStyleGuide;
 ```
 
-- 如果模块默认输出一个对象，对象名的首字母应该大写
+- 如果模块默认输出一个对象, 对象名的首字母应该大写
 
 ```js
   const StyleGuide = {
@@ -630,7 +630,7 @@ export default {
   @click="getListData"
 ```
 
-2. `v-for` 循环必须加上 `key` 属性，在整个 `for` 循环中 `key` 需要唯一
+2. `v-for` 循环必须加上 `key` 属性, 在整个 `for` 循环中 `key` 需要唯一
 
 ```html
   <!-- good -->
@@ -652,7 +652,7 @@ export default {
 
    以下为两种解决方案：
 
-- 将数据替换为一个计算属性，让其返回过滤后的列表
+- 将数据替换为一个计算属性, 让其返回过滤后的列表
 
 ```html
   <!-- bad -->
@@ -731,7 +731,7 @@ props: {
 
 2. 调试信息 `console.log()` `debugger` 使用完及时删除
 
-3. 除了三目运算，`if`,`else` 等禁止简写
+3. 除了三目运算, `if`,`else` 等禁止简写
 
 ```js
   // bad
@@ -755,10 +755,10 @@ props: {
 
 ## VsCode保存时自动修复Eslint错误
 
-> *同一个项目，保持代码风格的一致，是非常重要的一个规范。但事实上项目小组成员的代码校验规则、格式化工具通常都不一致，为了避免项目到后期出现无法维护的问题，项目成员使用同一套校验规则，同一个格式化方式是相当好的步骤之一。*
+> *同一个项目, 保持代码风格的一致, 是非常重要的一个规范。但事实上项目小组成员的代码校验规则, 格式化工具通常都不一致, 为了避免项目到后期出现无法维护的问题, 项目成员使用同一套校验规则, 同一个格式化方式是相当好的步骤之一。*
 
 #### 配置：
-1. 安装VsCode的EsLint、vetur和Prettier - Code formatter插件
+1. 安装VsCode的EsLint, vetur和Prettier - Code formatter插件
 2. 为项目安装EsLint包
 4. settings.json 配置
 
@@ -773,12 +773,12 @@ props: {
   },
   "prettier.useTabs": true, // 使用制表符缩进
   "editor.tabSize": 2, // tab空几格
-  // autoFixedOnSave 设置已废弃，采用如下新的设置
+  // autoFixedOnSave 设置已废弃, 采用如下新的设置
 	"editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "eslint.format.enable": true, // 启用ESLint作为格式化程序
-  // autoFix默认开启，只需输入字符串数组即可
+  // autoFix默认开启, 只需输入字符串数组即可
   "eslint.validate": ["javascript", "html", "vue", "react"],
   "prettier.semi": true, // 去掉代码结尾的分号
   "prettier.singleQuote": true, // 使用单引号替代双引号
