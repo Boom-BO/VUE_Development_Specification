@@ -777,13 +777,14 @@ props: {
     "source.fixAll.eslint": true
   },
   "eslint.format.enable": true, // 启用ESLint作为格式化程序
-    // autoFix默认开启，只需输入字符串数组即可
+  // autoFix默认开启，只需输入字符串数组即可
   "eslint.validate": ["javascript", "html", "vue", "react"],
   "prettier.semi": true, // 去掉代码结尾的分号
   "prettier.singleQuote": true, // 使用单引号替代双引号
   "prettier.trailingComma": "none", // 去除对象最末尾元素跟随的逗号
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true, // 让函数(名)和后面的括号之间加个空格
-  "vetur.format.defaultFormatter": {  // 格式化方式 (这个按用户自身习惯选择)
+  // 格式化方式 (这个按用户自身习惯选择)
+  "vetur.format.defaultFormatter": {  
     "html": "prettier",
     "css": "prettier",
     "postcss": "prettier",
